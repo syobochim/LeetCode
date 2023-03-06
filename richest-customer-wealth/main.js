@@ -1,13 +1,13 @@
 function maximumWealth(accounts) {
-    var richestNumber = 0;
-    for (var _i = 0, accounts_1 = accounts; _i < accounts_1.length; _i++) {
-        var account = accounts_1[_i];
-        var sumAccount = account.reduce(function (sum, num) { return sum + num; }, 0);
-        if (richestNumber < sumAccount) {
-            richestNumber = sumAccount;
-        }
-    }
-    return richestNumber;
+    //    let richestNumber: number = 0;
+    //    for (const account of accounts) {
+    //        const sumAccount = account.reduce((sum, num) => sum + num, 0);
+    //        if (richestNumber < sumAccount) {
+    //            richestNumber = sumAccount;
+    //        }
+    //    }
+    //    return richestNumber;
+    return Math.max.apply(Math, accounts.map(function (account) { return account.reduce(function (sum, num) { return sum + num; }, 0); }));
 }
 ;
 function test() {

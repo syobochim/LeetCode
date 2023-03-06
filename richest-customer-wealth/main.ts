@@ -1,12 +1,7 @@
 function maximumWealth(accounts: number[][]): number {
-    let richestNumber: number = 0;
-    for (const account of accounts) {
-        const sumAccount = account.reduce((sum, num) => sum + num, 0);
-        if (richestNumber < sumAccount) {
-            richestNumber = sumAccount;
-        }
-    }
-    return richestNumber;
+    return Math.max(
+            ...accounts.map(
+                    account => account.reduce((sum, num) => sum + num, 0)))
 };
 
 function test() {
