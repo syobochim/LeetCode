@@ -32,7 +32,6 @@ func romanToInt(s string) int {
         s = strings.ReplaceAll(s, "CM", "")
         result += 900
     }
-    fmt.Printf("string : %s, result: %d \n", s, result)
     for _, char := range s {
         switch char {
         case 'I': result += 1
